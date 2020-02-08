@@ -1,0 +1,43 @@
+{
+  "name": "use-latest-version",
+  "version": "1.0.0",
+  "description": "Returns latest version where out of order calls are expected.",
+  "main": "index.js",
+  "dependencies": {
+    "ulid": "2.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "25.1.2",
+    "@types/react": "16.9.19",
+    "react": "16.12.0",
+    "jest": "25.1.0",
+    "typescript": "3.7.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.6.0"
+  },
+  "scripts": {
+    "clean": "rimraf *.d.ts *.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepare": "npm run build",
+    "build:cjs": "tsc",
+    "build:es": "tsc -m esNext --outDir esm",
+    "build": "yarn build:cjs && yarn build:es"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanrs/use-latest-version.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks"
+  ],
+  "author": "Evan Schneider <me@evanrs.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evanrs/use-latest-version/issues"
+  },
+  "homepage": "https://github.com/evanrs/use-latest-version#readme"
+}
