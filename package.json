@@ -10,7 +10,7 @@
   "typings": "dist/index.d.ts",
   "source": "src/use-latest-version.ts",
   "scripts": {
-    "clean": "npx rimraf *.d.ts *.js",
+    "clean": "npx rimraf dist",
     "test": "jest",
     "test:watch": "jest --watch",
     "prepare": "npm run build",
@@ -24,8 +24,9 @@
     "dist/"
   ],
   "keywords": [
-    "react",
+    "react-hooks",
     "hooks",
+    "react",
     "setState",
     "versioning"
   ],
@@ -39,14 +40,28 @@
     "react": ">=16.6.0"
   },
   "dependencies": {
+    "ts-jest": "25.2.0",
     "ulid": "2.3.0"
   },
   "devDependencies": {
     "@types/jest": "25.1.2",
     "@types/react": "16.9.19",
     "jest": "25.1.0",
-    "microbundle": "0.11.0",
+    "microbundle": "0.12.0-next.8",
     "react": "16.12.0",
     "typescript": "3.7.5"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/node_modules/**"
+    ],
+    "testMatch": [
+      "**/*.spec.ts",
+      "**/*.test.ts"
+    ]
   }
 }
