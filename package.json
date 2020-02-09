@@ -7,8 +7,9 @@
   "module": "dist/use-latest-version.module.js",
   "jsnext:main": "dist/use-latest-version.module.js",
   "react-native": "dist/use-latest-version.module.js",
+  "types": "./dist",
   "typings": "dist/index.d.ts",
-  "source": "src/use-latest-version.ts",
+  "source": "src/index.ts",
   "scripts": {
     "clean": "npx rimraf dist",
     "test": "jest",
