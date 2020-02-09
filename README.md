@@ -23,7 +23,7 @@ function useShoddyService(input) {
 }
 ```
 
-With `use-latest-version` we don't have to worry about about the order they're received in — earlier versions will be ignored if they arrive late.
+With `use-latest-version` we don't have to worry about the order they're received in — earlier versions will be ignored if they arrive late.
 
 ## Usage
 
@@ -65,6 +65,7 @@ update(3)
 // and so will update our value
 latest.value === 3
 ```
+
 Our list of `dependencies` is our way of staging our next update. Earlier instances of `update` will still be accepted if they're a newer version than the current value.
 
 ## License
