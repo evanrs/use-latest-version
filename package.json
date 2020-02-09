@@ -1,6 +1,6 @@
 {
   "name": "use-latest-version",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "React setState hook that guarantees latest verison with out of order updates.",
   "main": "dist/use-latest-version.js",
   "umd:main": "dist/use-latest-version.umd.js",
@@ -14,7 +14,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "prepare": "npm run build",
-    "build": "microbundle"
+    "build": "microbundle",
+    "release": "npx standard-version"
   },
   "repository": {
     "type": "git",
