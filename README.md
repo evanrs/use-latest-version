@@ -39,13 +39,13 @@ const [{ version, value }, update] = useLatestVersion(defaultValue, dependencies
 
 The `version` is a [ulid](https://github.com/ulid/javascript) and has a monotonic sort order — it's comparable.
 
-```
+```ts
 a.version < b.version ? b.value: a.value
 ```
 
 The `update` method is bound to a single version until our depedencies change.
 
-```
+```ts
 const [input, setInput] = useState("")
 const [latest, update] = useLatestVersion(defaultValue, [input])
 
