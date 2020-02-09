@@ -7,7 +7,7 @@ import {
   DependencyList
 } from "react";
 
-type Value<T> = {
+export type Value<T> = {
   version: string;
   value: T;
 };
