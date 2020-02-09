@@ -1,11 +1,16 @@
 dependencies:
   ulid: 2.3.0
 devDependencies:
+  '@testing-library/react-hooks': 3.2.1_8d23436e3b9fa141bab91379710b4adb
   '@types/jest': 25.1.2
   '@types/react': 16.9.19
+  '@types/react-test-renderer': 16.9.2
+  '@types/testing-library__react-hooks': 3.2.0
   jest: 25.1.0
   microbundle: 0.12.0-next.8
   react: 16.12.0
+  react-test-renderer: 16.12.0_react@16.12.0
+  ts-jest: 25.2.0_jest@25.1.0
   typescript: 3.7.5
 lockfileVersion: 5.1
 packages:
@@ -1153,6 +1158,18 @@ packages:
     dev: true
     resolution:
       integrity: sha512-qbk9AP+cZUsKdW1GJsBpxPKFmCJ0T8swwzVje3qFd+AkQb74Q/tiuzrdfFg8AD2g5HH/XbE/I8Uc1KYHVYWfhg==
+  /@testing-library/react-hooks/3.2.1_8d23436e3b9fa141bab91379710b4adb:
+    dependencies:
+      '@babel/runtime': 7.8.4
+      '@types/testing-library__react-hooks': 3.2.0
+      react: 16.12.0
+      react-test-renderer: 16.12.0_react@16.12.0
+    dev: true
+    peerDependencies:
+      react: '>=16.9.0'
+      react-test-renderer: '>=16.9.0'
+    resolution:
+      integrity: sha512-1OB6Ksvlk6BCJA1xpj8/WWz0XVd1qRcgqdaFAq+xeC6l61Ucj0P6QpA5u+Db/x9gU4DCX8ziR5b66Mlfg0M2RA==
   /@types/babel__core/7.1.3:
     dependencies:
       '@babel/parser': 7.8.4
@@ -1234,6 +1251,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
+  /@types/react-test-renderer/16.9.2:
+    dependencies:
+      '@types/react': 16.9.19
+    dev: true
+    resolution:
+      integrity: sha512-4eJr1JFLIAlWhzDkBCkhrOIWOvOxcCAfQh+jiKg7l/nNZcCIL2MHl2dZhogIFKyHzedVWHaVP1Yydq/Ruu4agw==
   /@types/react/16.9.19:
     dependencies:
       '@types/prop-types': 15.7.3
@@ -1251,6 +1274,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
+  /@types/testing-library__react-hooks/3.2.0:
+    dependencies:
+      '@types/react': 16.9.19
+      '@types/react-test-renderer': 16.9.2
+    dev: true
+    resolution:
+      integrity: sha512-dE8iMTuR5lzB+MqnxlzORlXzXyCL0EKfzH0w/lau20OpkHD37EaWjZDz0iNG8b71iEtxT4XKGmSKAGVEqk46mw==
   /@types/yargs-parser/15.0.0:
     dev: true
     resolution:
@@ -1634,6 +1664,14 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-ZHao85gf0eZ0ESxLfCp73GG9O/VTytYDIkIiZDlURppLTI9wErSM/5yAKEq6rcUdxBLjMELmrYUJGg5sxGKMHg==
+  /bs-logger/0.2.6:
+    dependencies:
+      fast-json-stable-stringify: 2.1.0
+    dev: true
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-pd8DCoxmbgc7hyPKOvxtqNcjYoOsABPQdcCUjGp3d42VR2CX1ORhk2A87oqqu5R1kk+76nsxZupkmyd+MVtCog==
   /bser/2.1.1:
     dependencies:
       node-int64: 0.4.0
@@ -1694,6 +1732,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
+  /camelcase/4.1.0:
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-1UVjW+HjPFQmScaRc+Xeas+uNN0=
   /camelcase/5.3.1:
     dev: true
     engines:
@@ -3862,6 +3906,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-grNJDhb8b1Jm1qeqW5R/O63wUo4UXo2v2HMic6YT9i/HBlF93S8jkMgH7yugvY9ABDShH4VZMn8I+U8+fCNegw==
+  /make-error/1.3.5:
+    dev: true
+    resolution:
+      integrity: sha512-c3sIjNUow0+8swNwVpqoH4YCShKNFkMaw6oH1mNS2haDZQqkeZFlHS3dhoeEbKKmJB4vXpJucU6oH75aDYeE9g==
   /makeerror/1.0.11:
     dependencies:
       tmpl: 1.0.4
@@ -4891,6 +4939,18 @@ packages:
     dev: true
     resolution:
       integrity: sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
+  /react-test-renderer/16.12.0_react@16.12.0:
+    dependencies:
+      object-assign: 4.1.1
+      prop-types: 15.7.2
+      react: 16.12.0
+      react-is: 16.12.0
+      scheduler: 0.18.0
+    dev: true
+    peerDependencies:
+      react: ^16.0.0
+    resolution:
+      integrity: sha512-Vj/teSqt2oayaWxkbhQ6gKis+t5JrknXfPVo+aIJ8QwYAqMPH77uptOdrlphyxl8eQI/rtkOYg86i/UWkpFu0w==
   /react/16.12.0:
     dependencies:
       loose-envify: 1.4.0
@@ -5286,6 +5346,13 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-Ydydq3zC+WYDJK1+gRxRapLIED9PWeSuuS41wqyoRmzvhhh9nc+QQrVMKJYzJFULazeGhzSV0QleN2wD3boh2g==
+  /scheduler/0.18.0:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+    dev: true
+    resolution:
+      integrity: sha512-agTSHR1Nbfi6ulI0kYNK0203joW2Y5W4po4l+v03tOoiJKpTBbxpNhWDvqc/4IcOw+KLmSiQLTasZ4cab2/UWQ==
   /semver/5.7.1:
     dev: true
     hasBin: true
@@ -5804,6 +5871,27 @@ packages:
     dev: true
     resolution:
       integrity: sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk=
+  /ts-jest/25.2.0_jest@25.1.0:
+    dependencies:
+      bs-logger: 0.2.6
+      buffer-from: 1.1.1
+      fast-json-stable-stringify: 2.1.0
+      jest: 25.1.0
+      json5: 2.1.1
+      lodash.memoize: 4.1.2
+      make-error: 1.3.5
+      mkdirp: 0.5.1
+      resolve: 1.15.1
+      semver: 5.7.1
+      yargs-parser: 10.1.0
+    dev: true
+    engines:
+      node: '>= 6'
+    hasBin: true
+    peerDependencies:
+      jest: '>=25 <26'
+    resolution:
+      integrity: sha512-VaRdb0da46eorLfuHEFf0G3d+jeREcV+Wb/SvW71S4y9Oe8SHWU+m1WY/3RaMknrBsnvmVH0/rRjT8dkgeffNQ==
   /tslib/1.10.0:
     dev: true
     resolution:
@@ -6104,6 +6192,12 @@ packages:
       node: '>= 6'
     resolution:
       integrity: sha512-qXROVp90sb83XtAoqE8bP9RwAkTTZbugRUTm5YeFCBfNRPEp2YzTeqWiz7m5OORHzEvrA/qcGS8hp/E+MMROYw==
+  /yargs-parser/10.1.0:
+    dependencies:
+      camelcase: 4.1.0
+    dev: true
+    resolution:
+      integrity: sha512-VCIyR1wJoEBZUqk5PA+oOBF6ypbwh5aNB3I50guxAL/quggdfs4TtNHQrSazFA3fYZ+tEqfs0zIGlv0c/rgjbQ==
   /yargs-parser/16.1.0:
     dependencies:
       camelcase: 5.3.1
@@ -6130,10 +6224,15 @@ packages:
     resolution:
       integrity: sha512-T39FNN1b6hCW4SOIk1XyTOWxtXdcen0t+XYrysQmChzSipvhBO8Bj0nK1ozAasdk24dNWuMZvr4k24nz+8HHLg==
 specifiers:
+  '@testing-library/react-hooks': 3.2.1
   '@types/jest': 25.1.2
   '@types/react': 16.9.19
+  '@types/react-test-renderer': 16.9.2
+  '@types/testing-library__react-hooks': 3.2.0
   jest: 25.1.0
   microbundle: 0.12.0-next.8
   react: 16.12.0
+  react-test-renderer: 16.12.0
+  ts-jest: 25.2.0
   typescript: 3.7.5
   ulid: 2.3.0
