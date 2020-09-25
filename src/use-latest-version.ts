@@ -1,31 +1,22 @@
-import { ulid } from "ulid";
-import {
-  useState,
-  useEffect,
-  useCallback,
-  useMemo,
-  DependencyList
-} from "react";
+import { useState, useEffect, useCallback, useMemo, useRef, DependencyList } from "react";
 
 export type Value<T> = {
-  version: string;
+  version: number;
   value: T;
 };
 
 export function useLatestVersion<T>(
   defaultValue: T,
-  dependencies: DependencyList
+  dependencies: DependencyList,
 ): [Value<T>, (v: T) => void] {
   const [current, setCurrent] = useState<Value<T>>({
-    version: "",
-    value: defaultValue
+    version: 0,
+    value: defaultValue,
   });
   const [next, setNext] = useState<Value<T>>();
 
-  const version = useMemo(ulid, dependencies);
-  const update = useCallback((value: T) => setNext({ version, value }), [
-    version
-  ]);
+  const version = useVersionNumber(dependencies);
+  const update = useCallback((value: T) => setNext({ version, value }), [version]);
 
   useEffect(() => {
     if (next && current.version < next.version) {
@@ -34,4 +25,9 @@ export function useLatestVersion<T>(
   }, [current, next]);
 
   return [current, update];
+}
+
+export function useVersionNumber(dependencies: DependencyList) {
+  const ref = useRef(0);
+  return useMemo(() => ++ref.current, dependencies);
 }
