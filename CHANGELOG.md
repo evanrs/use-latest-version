@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/evanrs/use-latest-version/compare/v1.1.3...v1.2.0) (2020-09-25)
+
+
+### Features
+
+* remove use of ulid ([ed198fc](https://github.com/evanrs/use-latest-version/commit/ed198fcb1bb4a9c849c07236f818260be12af897))
+
 ### [1.1.3](https://github.com/evanrs/use-latest-version/compare/v1.1.2...v1.1.3) (2020-02-09)
 
 
