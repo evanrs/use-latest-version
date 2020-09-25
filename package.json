@@ -41,9 +41,6 @@
   "peerDependencies": {
     "react": ">=16.6.0"
   },
-  "dependencies": {
-    "ulid": "2.3.0"
-  },
   "devDependencies": {
     "@testing-library/react-hooks": "3.2.1",
     "@types/jest": "25.1.2",
