@@ -16,7 +16,7 @@
     "test:watch": "jest --watch",
     "prepare": "npm run build",
     "build": "microbundle",
-    "release": "npx standard-version"
+    "release": "pnpx standard-version"
   },
   "repository": {
     "type": "git",
