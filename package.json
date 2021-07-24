@@ -1,6 +1,6 @@
 {
   "name": "use-latest-version",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "The React setState hook for out-of-order updates — now in your control.",
   "main": "dist/use-latest-version.js",
   "umd:main": "dist/use-latest-version.umd.js",
